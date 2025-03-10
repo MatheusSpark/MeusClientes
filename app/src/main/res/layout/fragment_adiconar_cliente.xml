@@ -1,0 +1,150 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AdiconarClienteFragment">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/adicionar_novo_cliente"
+            android:textColor="@color/preto"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/nome_completo"
+            app:layout_constraintStart_toStartOf="@id/txtTitulo"
+            app:layout_constraintTop_toBottomOf="@id/txtTitulo"
+            android:inputType="text"/>
+        <EditText
+            android:id="@+id/etTelefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/telefone"
+            app:layout_constraintStart_toStartOf="@id/etNome"
+            app:layout_constraintTop_toBottomOf="@id/etNome"
+            android:inputType="phone"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/email"
+            app:layout_constraintStart_toStartOf="@id/etTelefone"
+            app:layout_constraintTop_toBottomOf="@id/etTelefone"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:id="@+id/etCep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/cep"
+            app:layout_constraintStart_toStartOf="@id/etEmail"
+            app:layout_constraintTop_toBottomOf="@id/etEmail"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/etLogadouro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/logadouro"
+            app:layout_constraintStart_toStartOf="@id/etCep"
+            app:layout_constraintTop_toBottomOf="@id/etCep"
+            android:inputType="text"
+            />
+
+        <EditText
+            android:id="@+id/etNumero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/numero"
+            app:layout_constraintStart_toStartOf="@id/etLogadouro"
+            app:layout_constraintTop_toBottomOf="@id/etLogadouro"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/etBairro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/bairro"
+            app:layout_constraintStart_toStartOf="@id/etNumero"
+            app:layout_constraintTop_toBottomOf="@id/etNumero"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/etCidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/cidade"
+            app:layout_constraintStart_toStartOf="@id/etBairro"
+            app:layout_constraintTop_toBottomOf="@id/etBairro"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/etEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/estado"
+            app:layout_constraintStart_toStartOf="@id/etCidade"
+            app:layout_constraintTop_toBottomOf="@id/etCidade"
+            android:inputType="text"/>
+
+        <CheckBox
+            android:id="@+id/cbTermosDeUso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:checked="false"
+            android:text="@string/termos_de_uso"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etEstado"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/btnCancelar"
+            android:text="@string/salvar"
+            android:textAllCaps="true"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/btnSalvar"
+            app:layout_constraintBottom_toBottomOf="@id/cbTermosDeUso"
+            android:text="@string/cancelar"
+            android:textAllCaps="true"
+            android:textStyle="bold" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</FrameLayout>
