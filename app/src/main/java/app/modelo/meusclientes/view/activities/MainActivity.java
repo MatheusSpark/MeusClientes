@@ -24,6 +24,8 @@ import com.google.android.material.snackbar.Snackbar;
 import app.modelo.meusclientes.R;
 import app.modelo.meusclientes.controller.ClienteController;
 import app.modelo.meusclientes.view.fragments.AdiconarClienteFragment;
+import app.modelo.meusclientes.view.fragments.AdiconarClienteFragmentCard;
+import app.modelo.meusclientes.view.fragments.ListarClientesCardFragment;
 import app.modelo.meusclientes.view.fragments.ListarClientesFragment;
 import app.modelo.meusclientes.view.fragments.ModeloAzulFragment;
 import app.modelo.meusclientes.view.fragments.ModeloVermelhoFragment;
@@ -123,9 +125,18 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_adicionar_cliente) {
             FloatingActionButton fab = findViewById(R.id.fab);
             fab.setVisibility(GONE);
-            setTitle("Novo Cliente");
+            setTitle(R.string.adicionar_novo_cliente);
             fragmentManager.beginTransaction().replace(R.id.content_fragment, new AdiconarClienteFragment()).commit();
 
+        } else if (id == R.id.nav_listar_clientes_card) {
+            setTitle(R.string.listar_clientes_card);
+            fragmentManager.beginTransaction().replace(R.id.content_fragment, new ListarClientesCardFragment()).commit();
+
+        } else if (id == R.id.nav_adicionar_cliente_card) {
+            FloatingActionButton fab = findViewById(R.id.fab);
+            fab.setVisibility(GONE);
+            setTitle(R.string.fragmento_adicionar_cliente_card);
+            fragmentManager.beginTransaction().replace(R.id.content_fragment, new AdiconarClienteFragmentCard()).commit();
         } else if (id == R.id.nav_listar_clientes) {
 
             menu = navigationView.getMenu();

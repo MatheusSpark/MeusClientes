@@ -11,6 +11,7 @@
 
     <!-- Opções do Menu Lateral Drawer -->
     <string name="fragmento_adicionar_cliente">Adiconar cliente</string>
+    <string name="fragmento_adicionar_cliente_card">Adiconar cliente Card</string>
     <string name="titulo_preto">Preto</string>
     <string name="fragmento_vermelho">Fragmento Vermelho</string>
     <string name="titulo_vermelho">Vermelho</string>
@@ -35,5 +36,6 @@
     <string name="lista_de_clientes">Lista de Clientes</string>
     <string name="pesquisar_por_nome">Pesquisar por nome</string>
     <string name="listar_clientes">Listar Clientes</string>
+    <string name="listar_clientes_card">Listar Clientes Card</string>
 
 </resources>

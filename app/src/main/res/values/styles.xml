@@ -17,4 +17,26 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="BotaoCancelarCustomizado" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">
+            @color/cinza
+        </item>
+        <item name="android:textStyle">
+            bold
+        </item>
+
+    </style>
+
+    <style name="BotaoSalvarCustomizado" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">
+            @color/cinza
+        </item>
+        <item name="android:textStyle">
+            bold
+        </item>
+        <item name="backgroundTint">
+            @color/colorPrimary
+        </item>
+    </style>
+
 </resources>
