@@ -32,5 +32,8 @@
     <string name="salvar">Salvar</string>
     <string name="cancelar">Cancelar</string>
     <string name="email">E-mail</string>
+    <string name="lista_de_clientes">Lista de Clientes</string>
+    <string name="pesquisar_por_nome">Pesquisar por nome</string>
+    <string name="listar_clientes">Listar Clientes</string>
 
 </resources>

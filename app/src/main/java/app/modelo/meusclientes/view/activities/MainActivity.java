@@ -1,11 +1,10 @@
-package app.modelo.meusclientes.view;
+package app.modelo.meusclientes.view.activities;
 
 
 import static android.view.View.GONE;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.opengl.Visibility;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,6 +23,10 @@ import com.google.android.material.snackbar.Snackbar;
 
 import app.modelo.meusclientes.R;
 import app.modelo.meusclientes.controller.ClienteController;
+import app.modelo.meusclientes.view.fragments.AdiconarClienteFragment;
+import app.modelo.meusclientes.view.fragments.ListarClientesFragment;
+import app.modelo.meusclientes.view.fragments.ModeloAzulFragment;
+import app.modelo.meusclientes.view.fragments.ModeloVermelhoFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -39,7 +42,7 @@ public class MainActivity extends AppCompatActivity
 
     // Gerenciamento de cada item do menu drawer
     MenuItem nav_adiconar_cliente;
-    MenuItem nav_vermelho;
+    MenuItem nav_listar_clientes;
     MenuItem nav_azul;
 
     @Override
@@ -75,7 +78,7 @@ public class MainActivity extends AppCompatActivity
         fragmentManager = getSupportFragmentManager();
 
         // content_fragment usado para receber os layouts dos fragmentos
-        fragmentManager.beginTransaction().replace(R.id.content_fragment, new ModeloVermelhoFragment()).commit();
+        fragmentManager.beginTransaction().replace(R.id.content_fragment, new ListarClientesFragment()).commit();
         ClienteController clienteController = new ClienteController(getBaseContext());
     }
 
@@ -123,14 +126,14 @@ public class MainActivity extends AppCompatActivity
             setTitle("Novo Cliente");
             fragmentManager.beginTransaction().replace(R.id.content_fragment, new AdiconarClienteFragment()).commit();
 
-        } else if (id == R.id.nav_vermelho) {
+        } else if (id == R.id.nav_listar_clientes) {
 
             menu = navigationView.getMenu();
 
             nav_adiconar_cliente = menu.findItem(R.id.nav_adicionar_cliente);
 
-            nav_vermelho = menu.findItem(R.id.nav_vermelho);
-            nav_vermelho.setTitle("Vermelho Ativado");
+            nav_listar_clientes = menu.findItem(R.id.nav_listar_clientes);
+            nav_listar_clientes.setTitle("Listar Clientes");
 
             nav_azul = menu.findItem(R.id.nav_azul);
             nav_azul.setTitle("Azul");
@@ -138,7 +141,7 @@ public class MainActivity extends AppCompatActivity
             // TODO: Mudar a cor de todos os itens do menu programaticamente
             navigationView.setItemTextColor(ColorStateList.valueOf(Color.BLACK));
 
-            fragmentManager.beginTransaction().replace(R.id.content_fragment, new ModeloVermelhoFragment()).commit();
+            fragmentManager.beginTransaction().replace(R.id.content_fragment, new ListarClientesFragment()).commit();
 
         } else if (id == R.id.nav_azul) {
 
@@ -146,8 +149,8 @@ public class MainActivity extends AppCompatActivity
 
             nav_adiconar_cliente = menu.findItem(R.id.nav_adicionar_cliente);
 //
-            nav_vermelho = menu.findItem(R.id.nav_vermelho);
-            nav_vermelho.setTitle("Vermelho");
+            nav_listar_clientes = menu.findItem(R.id.nav_listar_clientes);
+            nav_listar_clientes.setTitle("Vermelho");
 
             nav_azul = menu.findItem(R.id.nav_azul);
             nav_azul.setTitle("Azul Ativado");

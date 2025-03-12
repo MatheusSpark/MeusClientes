@@ -4,14 +4,13 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_listar_clientes"
+            android:icon="@drawable/ic_item_menu_padrao"
+            android:title="@string/listar_clientes" />
 
         <item android:id="@+id/nav_adicionar_cliente"
             android:icon="@drawable/ic_item_menu_padrao"
             android:title="@string/fragmento_adicionar_cliente" />
-
-        <item android:id="@+id/nav_vermelho"
-            android:icon="@drawable/ic_item_menu_padrao"
-            android:title="@string/fragmento_vermelho" />
 
         <item android:id="@+id/nav_azul"
             android:icon="@drawable/ic_item_menu_padrao"

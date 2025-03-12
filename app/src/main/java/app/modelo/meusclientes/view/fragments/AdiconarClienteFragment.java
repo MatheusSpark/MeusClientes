@@ -1,7 +1,5 @@
-package app.modelo.meusclientes.view;
+package app.modelo.meusclientes.view.fragments;
 
-import android.app.AlertDialog;
-import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -133,7 +131,19 @@ public class AdiconarClienteFragment extends Fragment {
                     isDadosOk = false;
                 }
                 if(isDadosOk){
+                    cliente.setNome(etNome.getText().toString());
+                    cliente.setTelefone(etTelefone.getText().toString());
+                    cliente.setEmail(etEmail.getText().toString());
+                    cliente.setCep(Integer.parseInt(etCep.getText().toString()));
+                    cliente.setLogradouro(etLogadouro.getText().toString());
+                    cliente.setNumero(etNumero.getText().toString());
+                    cliente.setBairro(etBairro.getText().toString());
+                    cliente.setCidade(etCidade.getText().toString());
+                    cliente.setEstado(etEstado.getText().toString());
+                    cliente.setTermosDeUso(cbTermosDeUso.isChecked());
                     clienteController.incluir(cliente);
+
+                    Toast.makeText(getActivity(), "Cliente salvo com sucesso!", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(getActivity(), "Erro ao salvar", Toast.LENGTH_SHORT).show();
                 }

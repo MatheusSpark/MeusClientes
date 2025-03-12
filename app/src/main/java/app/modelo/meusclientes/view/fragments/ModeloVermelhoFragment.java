@@ -1,4 +1,4 @@
-package app.modelo.meusclientes.view;
+package app.modelo.meusclientes.view.fragments;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
